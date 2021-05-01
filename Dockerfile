@@ -29,7 +29,7 @@ ADD context.xml /usr/local/tomcat/apache-tomcat-8.5.65/webapps/host-manager/META
 ADD context.xml /usr/local/tomcat/apache-tomcat-8.5.65/webapps/manager/META-INF/
 
 #Tomcat - Deploying Web Application 
-ADD webapp6.war /usr/local/tomcat/apache-tomcat-8.5.65/webapps/
+ADD /target/webapp6.war /usr/local/tomcat/apache-tomcat-8.5.65/webapps/
 
 #Exposing Container Port to Host
 EXPOSE 8080
