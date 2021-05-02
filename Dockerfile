@@ -3,7 +3,7 @@ From ubuntu:18.04
 # installing Dependencies
 
 RUN apt-get update && \
-apt-get install -y git build-essential curl wget software-properties-common unzip tar
+apt-get install -y git build-essential curl wget software-properties-common unzip tar nano
 
 # installing JAVA
 
