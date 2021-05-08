@@ -4,3 +4,5 @@
 <h2>Testing Deployment Automation</h2>
 </body>
 </html>
+int a
+int b
