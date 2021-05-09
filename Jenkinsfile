@@ -23,22 +23,23 @@ pipeline {
             }
         }
         
-         stage('Package deploy') {
+        stage('Package deploy') {
             steps {
-                sh 'mvn clean deploy'
+				nexusPublisher nexusInstanceId: 'nexus', nexusRepositoryId: 'hclrelease', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: '/var/lib/jenkins/workspace/Project2/target/webapp6.war']], mavenCoordinate: [artifactId: 'webapp6', groupId: 'com.hcl', packaging: 'war', version: '1.8']]]
+                //sh 'mvn clean deploy'
             }
         }
         
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t 34.123.140.86:8083/webapp6:1.7 .'
+                sh 'docker build -t 34.123.140.86:8083/webapp6:1.8 .'
             }
         }
         
         stage('Push Docker Image') {
             steps {
                 sh 'docker login -u admin -p test@1234 34.123.140.86:8083'
-                sh 'docker push 34.123.140.86:8083/webapp6:1.7'
+                sh 'docker push 34.123.140.86:8083/webapp6:1.8'
                 
             }
         }
