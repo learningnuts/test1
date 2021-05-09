@@ -1,0 +1,6 @@
+projectKey=com.hcl:webapp6
+serverUrl=http://34.71.207.206:9000
+serverVersion=7.1.0.11001
+dashboardUrl=http://34.71.207.206:9000/dashboard/index/com.hcl:webapp6
+ceTaskId=AXlQiUgx9YqwJnEf_8Xa
+ceTaskUrl=http://34.71.207.206:9000/api/ce/task?id=AXlQiUgx9YqwJnEf_8Xa
